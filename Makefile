@@ -2,7 +2,7 @@ MODULENAME := pci_enumerator
 
 obj-m += $(MODULENAME).o
 
-$(MODULENAME)-y += main.o
+$(MODULENAME)-y += main.o device_handlers.o pci_enumeration.o
 
 KERNELDIR ?= ~/workspace/buildroot-2020.02.4/output/build/linux-4.19.91
 
