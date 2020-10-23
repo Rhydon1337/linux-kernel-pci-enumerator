@@ -11,7 +11,7 @@ struct list_head* pci_enumrator(void) {
     size_t i, j;
     INIT_LIST_HEAD(pci_ids);
     j = 0;
-	list_for_each_entry(bus, &pci_root_buses, node) {
+    list_for_each_entry(bus, &pci_root_buses, node) {
         for (i = 0; i < MAX_NUMBER_OF_PCI_DEV_PER_BUS; i++) {
             u16 device_id = 0;
             u16 vendor_id = 0;
@@ -42,10 +42,10 @@ struct list_head* pci_enumrator(void) {
 void clean_up_list(struct list_head* pci_devices) {
     struct PciID* pci_id;
     struct list_head *pos, *q;
-    list_for_each_safe(pos, q, pci_devices){
-		pci_id = list_entry(pos, struct PciID, pci_ids_list);
-		list_del(pos);
+    list_for_each_safe(pos, q, pci_devices) {
+        pci_id = list_entry(pos, struct PciID, pci_ids_list);
+        list_del(pos);
         kfree(pci_id);
-	}
+    }
     kfree(pci_devices);
 }
