@@ -22,7 +22,7 @@ There are three well known address spaces:
 
 ### Note: the configuration space is typically 256 bytes, and can be accessed with read/write. The target device for the configuration space access is selected with the initialization device select (IDSEL - individual device select for configuration) signal, which is then decoded by the target device.
 
-### The kernel module iterate on every PCI device configuartion on every PCI bus and will fetch device_id, vendor_id, subsystem_id, subsystem_vendor_id and subsystem_vendor_id. ###
+The kernel module iterate on every PCI device configuartion on every PCI bus and will fetch device_id, vendor_id, subsystem_id, subsystem_vendor_id and subsystem_vendor_id.
 
 ![image](https://upload.wikimedia.org/wikipedia/commons/c/ca/Pci-config-space.svg)
 
