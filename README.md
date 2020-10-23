@@ -6,7 +6,7 @@ Tested on linux kernel version: 4.19.91, 5.4.0-48-generic.
 
 ## How it works
 First of all, we must understand how the CPU is able to communicate with peripheral devices in a computer (disk, mouse, keyboard etc).
-In personal comuper there are two different configurations to achieve this:
+In personal computer there are two different configurations to achieve this:
 
 * **Memory-mapped I/O uses the same address space to address both memory and I/O devices.** The memory and registers of the I/O devices are mapped to address values. So when an address is accessed by the CPU, it may refer to a portion of physical RAM, or it can instead refer to memory of the I/O device. Thus, the CPU instructions used to access the memory can also be used for accessing devices.
 
@@ -22,7 +22,7 @@ There are three well known address spaces:
 
 ### Note: the configuration space is typically 256 bytes, and can be accessed with read/write. The target device for the configuration space access is selected with the initialization device select (IDSEL - individual device select for configuration) signal, which is then decoded by the target device.
 
-The kernel module iterate on every PCI device configuartion on every PCI bus and will fetch device_id, vendor_id, subsystem_id, subsystem_vendor_id and subsystem_vendor_id.
+The kernel module iterate on every PCI device configuration on every PCI bus and will fetch device_id, vendor_id, subsystem_id, subsystem_vendor_id and subsystem_vendor_id.
 
 ![image](https://upload.wikimedia.org/wikipedia/commons/c/ca/Pci-config-space.svg)
 
