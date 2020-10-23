@@ -1,6 +1,6 @@
 # linux-kernel-pci-enumerator
 ## TL;DR
-Enumrate all PCI devices inside all PCI buses in other words my lightweight lspci.
+Enumrate all PCI devices inside all PCI buses in other words a lightweight lspci.
 
 Tested on linux kernel version: 4.19.91, 5.4.0-48-generic.
 
